@@ -26,7 +26,7 @@ export default function Countdown() {
 	const minutesLeft= Math.floor(timeRemaining_ms/60000);
 
     return (
-        <section className="flex gap-10 text-6xl justify-center font-bold">
+        <section className="flex gap-10 text-6xl justify-center font-bold my-40">
             <div>
                 <h2 className="text-center">{daysLeft}</h2>
                 <p className="uppercase text-2xl">days</p>

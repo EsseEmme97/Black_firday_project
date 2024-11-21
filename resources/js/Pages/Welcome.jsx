@@ -2,6 +2,7 @@ import { Head, Link } from '@inertiajs/react';
 import Navbar from "@/Components/Navbar"
 import HeroSection from '@/Components/HeroSection';
 import Countdown from '@/Components/Countdown';
+import DisplayProducts from '@/Components/Products/DisplayProducts';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -21,6 +22,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             <Navbar/>
             <HeroSection/>
             <Countdown/>
+            <DisplayProducts/>
         </>
     );
 }
