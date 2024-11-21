@@ -26,8 +26,19 @@ export default function Countdown() {
 	const minutesLeft= Math.floor(timeRemaining_ms/60000);
 
     return (
-        <section>
-            <h1>{`${daysLeft} DAYS ${hoursLeft} HOURS ${minutesLeft} MINUTES`}</h1>
+        <section className="flex gap-10 text-6xl justify-center font-bold">
+            <div>
+                <h2 className="text-center">{daysLeft}</h2>
+                <p className="uppercase text-2xl">days</p>
+            </div>
+            <div>
+                <h2 className="text-center">{hoursLeft}</h2>
+                <p className="uppercase text-2xl">hours</p>
+            </div>
+            <div>
+                <h2 className="text-center">{minutesLeft}</h2>
+                <p className="uppercase text-2xl">minutes</p>
+            </div>
         </section>
     );
 }
