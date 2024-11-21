@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text("description");
             $table->integer("stock")->default(0);
             $table->integer("discountpercentage");
+            $table->string("imgpath")->nullable();
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('products');
     }
 };

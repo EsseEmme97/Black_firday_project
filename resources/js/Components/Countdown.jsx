@@ -28,11 +28,11 @@ export default function Countdown() {
     return (
         <section className="flex gap-10 text-6xl justify-center font-bold my-40">
             <div>
-                <h2 className="text-center">{daysLeft}</h2>
+                <h2 className="text-center">{daysLeft<10 ? `0${daysLeft}` : daysLeft}</h2>
                 <p className="uppercase text-2xl">days</p>
             </div>
             <div>
-                <h2 className="text-center">{hoursLeft}</h2>
+                <h2 className="text-center">{hoursLeft<10 ? `0${hoursLeft}` : hoursLeft}</h2>
                 <p className="uppercase text-2xl">hours</p>
             </div>
             <div>
