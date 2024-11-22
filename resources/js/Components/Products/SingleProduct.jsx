@@ -17,6 +17,7 @@ export default function SingleProduct({
                 <img
                     src={imgpath}
                     className="rounded ax-h-[300px] w-full h-[300px] object-cover hover:scale-110 transition-transform duration-200"
+                    loading="lazy"
                 />
                 <span className="absolute -right-20 top-10 bg-red-500 block rotate-45 w-[300px] text-center p-1.5 font-bold text-xl">
                     {discountpercentage}% OFF
