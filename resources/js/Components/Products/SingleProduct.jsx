@@ -24,10 +24,12 @@ export default function SingleProduct({
                 </span>
             </div>
 
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <span className="line-through">{price} $</span>
-            <span className="text-xl block">{effectivePrice} $</span>
+            <h2 className="text-xl font-bold mt-2">{title}</h2>
+            <p className="mt-2 text-sm">{description}</p>
+            <div className="mt-2">
+                <span className="line-through text-sm">{price} $</span>
+                <span className="text-xl block font-bold">{effectivePrice} $</span>
+            </div>
         </article>
     );
 }

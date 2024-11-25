@@ -3,6 +3,7 @@ import Navbar from "@/Components/Navbar"
 import HeroSection from '@/Components/HeroSection';
 import Countdown from '@/Components/Countdown';
 import DisplayProducts from '@/Components/Products/DisplayProducts';
+import Newsletter from '@/Components/Newsletter';
 
 export default function Welcome({ auth, laravelVersion, phpVersion, products }) {
     console.log(products);
@@ -13,6 +14,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion, products }) 
             <HeroSection/>
             <Countdown/>
             <DisplayProducts products={products}/>
+            <Newsletter/>
         </>
     );
 }

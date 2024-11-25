@@ -36,7 +36,7 @@ export default function Countdown() {
                 <p className="uppercase text-2xl">hours</p>
             </div>
             <div>
-                <h2 className="text-center">{minutesLeft}</h2>
+                <h2 className="text-center">{minutesLeft<10 ? `0${minutesLeft}` : minutesLeft}</h2>
                 <p className="uppercase text-2xl">minutes</p>
             </div>
         </section>
