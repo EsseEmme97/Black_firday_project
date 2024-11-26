@@ -8,7 +8,7 @@ export default function DisplayReviews({ reviews }) {
     console.log(reviews);
     return (
         <section className="mt-20">
-            <h2 className="font-bold uppercase text-6xl text-center">
+            <h2 className="font-bold uppercase text-4xl md:text-6xl text-center">
                 what <span className="text-red-600">they</span> tell{" "}
                 <span className="text-red-600">about us</span>
             </h2>
@@ -19,6 +19,18 @@ export default function DisplayReviews({ reviews }) {
                 spaceBetween={30}
                 autoplay={{delay:2500}}
                 modules={[Autoplay]}
+                breakpoints={{
+                   "@0.00":{
+                    slidesPerView:1,
+                    effect:"slide",
+                    spaceBetween:10,
+                    initialSlide:0
+                   },
+                   "@1.00":{
+                    slidesPerView:3,
+                    effect:"slide"
+                   }
+                }}
                 className="mySwiper mt-20 mx-20"
             >
                 {reviews.map((review) => {

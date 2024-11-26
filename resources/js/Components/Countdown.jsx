@@ -26,18 +26,18 @@ export default function Countdown() {
 	const minutesLeft= Math.floor(timeRemaining_ms/60000);
 
     return (
-        <section className="flex gap-10 text-6xl justify-center font-bold my-40">
+        <section className="flex gap-10 text-4xl md:text-6xl justify-center font-bold my-32 md:my-40">
             <div>
                 <h2 className="text-center">{daysLeft<10 ? `0${daysLeft}` : daysLeft}</h2>
-                <p className="uppercase text-2xl">days</p>
+                <p className="uppercase text-xl">days</p>
             </div>
             <div>
                 <h2 className="text-center">{hoursLeft<10 ? `0${hoursLeft}` : hoursLeft}</h2>
-                <p className="uppercase text-2xl">hours</p>
+                <p className="uppercase text-xl">hours</p>
             </div>
             <div>
                 <h2 className="text-center">{minutesLeft<10 ? `0${minutesLeft}` : minutesLeft}</h2>
-                <p className="uppercase text-2xl">minutes</p>
+                <p className="uppercase text-xl">minutes</p>
             </div>
         </section>
     );

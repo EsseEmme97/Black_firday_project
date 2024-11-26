@@ -4,31 +4,31 @@ import { GiPositionMarker } from "react-icons/gi";
 export default function Footer() {
     return (
         <footer>
-            <div className="flex uppercase mt-20 border-t py-10 border-b">
-                <div className="w-1/2 flex justify-center">
+            <div className="flex uppercase mt-20 border-t py-4 md:py-10 border-b justify-normal md:justify-center">
+                <div className="hidden w-1/2 md:flex justify-center">
                     <img
                         className="rounded-full size-64"
                         src="./images/logo_black_friday.webp"
                         alt="logo image"
                     ></img>
                 </div>
-                <div className="w-1/2">
-                    <h3 className="text-xl text-center font-bold">
+                <div className="w-full md:w-1/2">
+                    <h3 className="text-2xl md:text-xl text-center font-bold">
                         Come to our <span className="text-red-600">shop</span>
                     </h3>
-                    <div className="flex mt-8">
-                        <div className="border-r border-l px-6 w-1/2">
+                    <div className="flex justify-between md:justify-normal mt-8">
+                        <div className="md:border-r md:border-l md:px-6 w-1/2">
                             <h4 className="font-bold text-center text-xl">
                                 About us
                             </h4>
                             <div className="flex items-center mt-4 gap-2 justify-center">
-                                <GiPositionMarker />
-                                <p>London, main street, 999</p>
+                                <GiPositionMarker className="hidden md:block md:size-8"/>
+                                <p className="text-sm md:text-base">London, main street, 999</p>
                             </div>
                             <div className="flex mt-4 gap-2 justify-center">
-                                <FaFacebook className="size-8 hover:scale-110 hover:rotate-3 transition-transform duration-200" />
-                                <FaInstagram className="size-8 hover:scale-110 hover:rotate-3 transition-transform duration-200" />
-                                <FaWhatsapp className="size-8 hover:scale-110 hover:rotate-3 transition-transform duration-200" />
+                                <FaFacebook className="md:size-8 size-6 hover:scale-110 hover:rotate-3 transition-transform duration-200" />
+                                <FaInstagram className="md:size-8 size-6 hover:scale-110 hover:rotate-3 transition-transform duration-200" />
+                                <FaWhatsapp className="md:size-8 size-6 hover:scale-110 hover:rotate-3 transition-transform duration-200" />
                             </div>
                         </div>
                         <div className="w-1/2 text-center">

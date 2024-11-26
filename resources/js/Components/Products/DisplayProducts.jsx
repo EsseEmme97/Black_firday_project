@@ -7,8 +7,8 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function DisplayProducts({ products }) {
     return (
-        <section>
-            <h1 className="text-6xl uppercase font-bold text-center">
+        <section id="products">
+            <h1 className="text-4xl md:text-6xl uppercase font-bold text-center">
                 Check out our <span className="text-red-600">products</span> on
                 sales!!
             </h1>

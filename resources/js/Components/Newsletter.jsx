@@ -32,13 +32,13 @@ export default function Newsletter() {
     }, [showSuccessMessage]);
 
     return (
-        <section className="mt-20 relative">
-            <h2 className="uppercase text-6xl font-bold text-center">
+        <section className="mt-20 relative" id="newsletter">
+            <h2 className="uppercase text-4xl md:text-6xl font-bold text-center">
                 Subscribe to our{" "}
                 <span className="text-red-600">Newsletter</span> !!
             </h2>
             <form
-                className="p-4 mt-20 flex flex-col w-1/3 mx-auto bg-black rounded-lg"
+                className="p-4 mt-20 flex flex-col w-full md:w-1/3 mx-auto bg-black rounded-lg"
                 onSubmit={handleSubmit}
                 method="POST"
             >
