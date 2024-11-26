@@ -17,7 +17,6 @@ export default function DisplayProducts({ products }) {
                 centeredSlides={true}
                 slidesPerView={3}
                 effect={"coverflow"}
-                lazy={true}
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,
@@ -40,7 +39,8 @@ export default function DisplayProducts({ products }) {
                     effect:"coverflow"
                    }
                 }}
-                className="mySwiper mt-10 p-4"
+                style={{padding:"50px"}}
+                className="mySwiper mt-10"
             >
                 {products.map((el) => (
                     <SwiperSlide key={el.id}>

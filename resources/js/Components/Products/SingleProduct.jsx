@@ -12,7 +12,7 @@ export default function SingleProduct({
         (floatingPrice * discountpercentage) / 100
     ).toFixed(2);
     return (
-        <article className="p-4 bg-black rounded-lg relative overflow-hidden">
+        <article className="p-4 bg-black rounded-lg relative overflow-hidden ">
             <div className="overflow-hidden relative">
                 <img
                     src={imgpath}

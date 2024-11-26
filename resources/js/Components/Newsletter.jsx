@@ -1,5 +1,6 @@
 import { useForm } from "@inertiajs/react";
 import { useState, useEffect } from "react";
+import { Transition } from "@headlessui/react";
 
 export default function Newsletter() {
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -29,7 +30,6 @@ export default function Newsletter() {
             return () => clearTimeout(timer);
         }
     }, [showSuccessMessage]);
-    
 
     return (
         <section className="mt-20 relative">
@@ -43,7 +43,7 @@ export default function Newsletter() {
                 method="POST"
             >
                 <div className="flex flex-col gap-1.5">
-                    <label className="text-sm" for="name">
+                    <label htmlFor="name" className="text-sm">
                         Name
                     </label>
                     <input
@@ -59,8 +59,9 @@ export default function Newsletter() {
                     <p className="text-sm text-red-300 mt-2">{errors.name}</p>
                 )}
                 <div className="flex flex-col gap-1.5 mt-4">
-                    <label className="text-sm">Email</label>
+                    <label htmlFor="email" className="text-sm">Email</label>
                     <input
+                        id="email"
                         placeholder="email"
                         className="rounded-lg outline-none border-none focus:outline-blue-500 text-black"
                         value={data.email}
@@ -79,7 +80,7 @@ export default function Newsletter() {
                         onChange={(e) => setData("gdpr", e.target.checked)}
                         checked={data.gdpr}
                     />
-                    <label for="gdpr" className="text-xs mx-2">
+                    <label htmlFor="gdpr" className="text-xs mx-2">
                         By checking this box, you consent to the processing of
                         your personal data in accordance with our Privacy
                         Policy.
@@ -98,11 +99,11 @@ export default function Newsletter() {
                     </button>
                 </div>
             </form>
-            {showSuccessMessage && (
-                <div className=" animate__backInRight absolute rounded-lg p-4 bg-green-200 text-green-500 border-green-500 w-1/4 bottom-0 right-0">
-                    Thank you for your subscription!!
-                </div>
-            )}
+                <Transition show={showSuccessMessage}>
+                    <div className="data-[closed]:opacity-0 duration-200 transition absolute rounded-lg p-4 bg-green-200 text-green-500 border-green-500 w-1/4 bottom-0 right-0">
+                        Thank you for your subscription!!
+                    </div>
+                </Transition>
         </section>
     );
 }

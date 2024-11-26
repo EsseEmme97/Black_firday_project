@@ -4,10 +4,9 @@ import HeroSection from '@/Components/HeroSection';
 import Countdown from '@/Components/Countdown';
 import DisplayProducts from '@/Components/Products/DisplayProducts';
 import Newsletter from '@/Components/Newsletter';
-import 'animate.css'
+
 
 export default function Welcome({ auth, laravelVersion, phpVersion, products }) {
-    console.log(products);
     return (
         <>
             <Head title="Welcome" />
