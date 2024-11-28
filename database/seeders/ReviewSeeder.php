@@ -17,32 +17,38 @@ class ReviewSeeder extends Seeder
             [
                 "title" => "An amazing store with amazing products",
                 "content" => "What a beautiful store",
-                "rating" => 4
+                "rating" => 4,
+                "is_accepted"=>true
             ],
             [
                 "title" => "Exceptional quality and quick delivery",
                 "content" => "I absolutely love this store",
-                "rating" => 5
+                "rating" => 5,
+                "is_accepted"=>true
             ],
             [
                 "title" => "Friendly staff and top-notch service",
                 "content" => "Highly recommended to everyone",
-                "rating" => 5
+                "rating" => 5,
+                "is_accepted"=>true
             ],
             [
                 "title" => "Great deals and a wide product range",
                 "content" => "Shopping here is a real pleasure",
-                "rating" => 4
+                "rating" => 4,
+                "is_accepted"=>true
             ],
             [
                 "title" => "Perfect for gifts and unique finds",
                 "content" => "I found the ideal present here",
-                "rating" => 5
+                "rating" => 5,
+                "is_accepted"=>true
             ],
             [
                 "title" => "Reliable service and excellent items",
                 "content" => "Everything exceeded my expectations",
-                "rating" => 4
+                "rating" => 4,
+                "is_accepted"=>true
             ]
         ]);
     }

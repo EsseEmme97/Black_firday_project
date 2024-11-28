@@ -1,11 +1,11 @@
 import SingleReview from "./SingleReview";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "@inertiajs/react";
 
 import "swiper/css";
 
 import { Autoplay } from "swiper/modules";
 export default function DisplayReviews({ reviews }) {
-    console.log(reviews);
     return (
         <section className="mt-20">
             <h2 className="font-bold uppercase text-4xl md:text-6xl text-center">
@@ -46,7 +46,7 @@ export default function DisplayReviews({ reviews }) {
                 })}
             </Swiper>
             <div className="text-center mt-10">
-                <a href="#" className="bg-red-600 uppercase font-bold p-2 rounded-lg hover:scale-105 transition-transform duration-200">Give us your feedback</a>
+                <Link href="/reviews" className="bg-red-600 uppercase font-bold p-2 rounded-lg hover:scale-105 transition-transform duration-200">Give us your feedback</Link>
             </div>
         </section>
     );

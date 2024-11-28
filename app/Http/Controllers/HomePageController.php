@@ -12,15 +12,11 @@ class HomePageController extends Controller
 {
     public function index(){
         return Inertia::render('Welcome', [
-            'canLogin' => Route::has('login'),
-            'canRegister' => Route::has('register'),
-            'laravelVersion' => Application::VERSION,
-            'phpVersion' => PHP_VERSION,
             'products'=>Product::all()->makeHidden("stock")->map(function($product){
                 $product->imgpath = asset('storage' . $product->imgpath);
                 return $product;
             }),
-            'reviews'=>Review::all()->makeHidden("is_accepted")
+            'reviews'=>Review::where("is_accepted",true)->get()->makeHidden("is_accepted")
         ]);
     }
 }

@@ -1,24 +1,23 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\NewsletterController;
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
+use App\Http\Controllers\ReviewsController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-Route::get('/', [HomePageController::class,'index'])->name("home");
 
-Route::post("/newsletter",[NewsletterController::class,"store"]);
+Route::get('/', [HomePageController::class, 'index'])->name("home");
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::post("/newsletter", [NewsletterController::class, "store"]);
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+Route::get("/reviews", [ReviewsController::class, "index"])->name("reviews");
+Route::post("/reviews", [ReviewsController::class, "store"]);
+Route::get("/success", [ReviewsController::class, "success"])->name("success");
 
-require __DIR__.'/auth.php';
+
+Route::get("/admin", [AdminController::class, "index"])->name("admin")->middleware("auth");
+Route::post("/admin", [AdminController::class,"store"]);
+
+
+require __DIR__ . '/auth.php';

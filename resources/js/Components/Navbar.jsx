@@ -1,4 +1,4 @@
-
+import { Link } from "@inertiajs/react";
 export default function Navbar() {
     return (
         <nav className="relative">
@@ -10,10 +10,10 @@ export default function Navbar() {
                 ></img>
                 <ul className="flex items-center gap-8">
                     <li className="p-2 rounded hover:bg-red-500 transition-all duration-200">
-                        <a href="#products">Products</a>
+                        <Link href="/#products">Products</Link>
                     </li>
                     <li className="p-2 rounded hover:bg-red-500 transition-all duration-200">
-                        <a href="#newsletter">Newsletter</a>
+                        <Link href="/#newsletter">Newsletter</Link>
                     </li>
                 </ul>
             </div>

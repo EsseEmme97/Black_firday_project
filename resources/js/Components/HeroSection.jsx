@@ -16,7 +16,7 @@ export default function HeroSection() {
 		  loop={true}
 		/>
 		<Lottie
-		  className="hidden md:block md:w-[400px] md:h-full md:absolute md:top-4 md:right-4 md:z-10"
+		  className="hidden md:block md:w-[400px] md:h-full md:absolute md:bottom-4 md:left-4 md:z-10"
 		  animationData={animation}
 		  loop={true}
 		/>
