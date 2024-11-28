@@ -1,3 +1,5 @@
+import ProductsRow from "./ProductsRow";
+
 export default function ProductsTable({ products }) {
     return (
         <>
@@ -17,29 +19,7 @@ export default function ProductsTable({ products }) {
                 <tbody>
                     {products.map((product, index) => {
                         return (
-                            <tr>
-                                <td className="p-4 text-center border flex justify-center">
-                                    <img
-                                        className="rounded-full size-8"
-                                        src={product.imgpath}
-                                    />
-                                </td>
-                                <td className="p-4 text-center border">
-                                    {product.id}
-                                </td>
-                                <td className="p-4 text-center border">
-                                    {product.title}
-                                </td>
-                                <td className="p-4 text-center border">
-                                    {product.description}
-                                </td>
-                                <td className="p-4 text-center border">
-                                    {product.stock}
-                                </td>
-                                <td className="p-4 text-center border">
-                                    {product.price} $
-                                </td>
-                            </tr>
+                          <ProductsRow key={index} {...product} />
                         );
                     })}
                 </tbody>

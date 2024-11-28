@@ -4,7 +4,7 @@ import { useForm } from "@inertiajs/react";
 export default function CreateProducts() {
     const [imgPreview, setImgPreview] = useState();
 
-    const { data, setData, post, processing, errors } = useForm({
+    const { data, setData, post, processing, errors, reset } = useForm({
         title: "",
         description: "",
         stock: 1,
@@ -23,8 +23,7 @@ export default function CreateProducts() {
 
 	const handleSubmit = (e) =>{
 		e.preventDefault();
-		console.log("fin qua ci siamo")
-		 post("/admin") 
+		 post("/admin",{onSuccess:()=>{reset("title","description","stock","price","discountpercentage",imgpath)}}) 
 	}
 
     return (

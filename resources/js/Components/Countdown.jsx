@@ -29,15 +29,15 @@ export default function Countdown() {
         <section className="flex gap-10 text-4xl md:text-6xl justify-center font-bold my-32 md:my-40">
             <div>
                 <h2 className="text-center">{daysLeft<10 ? `0${daysLeft}` : daysLeft}</h2>
-                <p className="uppercase text-xl">days</p>
+                <p className="uppercase text-xl text-center">days</p>
             </div>
             <div>
                 <h2 className="text-center">{hoursLeft<10 ? `0${hoursLeft}` : hoursLeft}</h2>
-                <p className="uppercase text-xl">hours</p>
+                <p className="uppercase text-xl text-center">hours</p>
             </div>
             <div>
                 <h2 className="text-center">{minutesLeft<10 ? `0${minutesLeft}` : minutesLeft}</h2>
-                <p className="uppercase text-xl">minutes</p>
+                <p className="uppercase text-xl text-center">minutes</p>
             </div>
         </section>
     );

@@ -10,9 +10,9 @@ export default function AdminNavbar() {
 
     return (
         <nav className="flex justify-between">
-            <Link className="size-16 rounded-full">
+            <Link href="/admin" className="size-16 rounded-full">
                 <img
-                    src="./images/logo_black_friday.webp"
+                    src="../images/logo_black_friday.webp"
                     className="size-16 rounded-full"
                 />
             </Link>
